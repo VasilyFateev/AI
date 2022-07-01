@@ -13,6 +13,7 @@ namespace Game.AI
         {
             var a = GetComponent<EnemyStateMachineAI>();
             a.AddState(state as State);
+            Destroy(GetComponent<StateProvider<T>>());
         }
     }
     
